@@ -31,8 +31,6 @@ class CatBreedModel {
     this.widthImageBreed,
   });
 
-  static List<CatBreedModel> fromJsonList(List<dynamic> json) => json.map((i) => CatBreedModel.fromJson2(i)).toList();
-
   Map<String, dynamic> toJson() => {
         'idBreed': idBreed,
         'nameBreed': nameBreed,
@@ -65,22 +63,5 @@ class CatBreedModel {
         urlImageBreed: json["image"]["url"] ?? '',
         weightImperialBreed: json["weight"]["imperial"] ?? '',
         weightMetricBreed: json["weight"]["metric"] ?? '',
-      );
-
-  factory CatBreedModel.fromJson2(Map<String, dynamic> json) => CatBreedModel(
-        idBreed: json["idBreed"],
-        nameBreed: json["nameBreed"],
-        temperamentBreed: json["temperamentBreed"],
-        originBreed: json["originBreed"],
-        countryCodeBreed: json["countryCodeBreed"],
-        altsNamesBreed: json["altsNamesBreed"],
-        referenceImgBreed: json["referenceImgBreed"],
-        lifeSpanBreed: json["lifeSpanBreed"],
-        descriptionBreed: json["descriptionBreed"],
-        heightImageBreed: json["heightImageBreed"],
-        widthImageBreed: json["widthImageBreed"],
-        urlImageBreed: json["urlImageBreed"],
-        weightImperialBreed: json["weightImperialBreed"],
-        weightMetricBreed: json["weightMetricBreed"],
       );
 }
