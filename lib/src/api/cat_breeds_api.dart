@@ -24,15 +24,6 @@ class CatBreedsApi {
           catBreedList.add(CatBreedModel.fromJson(data[i]));
         }
 
-        // List<CatBreedModel> catBreedList = <CatBreedModel>[
-        //   ...(data as List<dynamic>)
-        //       .map(
-        //         (dynamic value) => CatBreedModel.fromJson(value as Map<String, dynamic>),
-        //       )
-        //       .toList()
-        // ];
-        // print(catBreedList);
-
         return catBreedList;
       } else {
         return catBreedList;
