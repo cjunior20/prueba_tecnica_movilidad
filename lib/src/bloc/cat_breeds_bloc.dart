@@ -30,6 +30,11 @@ class CatBreedsBloc {
 
   Future<List<CatBreedModel>> searchCatBreedByName(String nameBreed) async {
     final listBreeds = await _api.getCatBreeds();
-    return listBreeds.where((catBreed) => catBreed.nameBreed!.toUpperCase() == nameBreed.toUpperCase()).toList();
+    return listBreeds.where((catBreed) {
+      final nameBreedModel = catBreed.nameBreed!.toUpperCase();
+      final query = nameBreed.toUpperCase();
+
+      return nameBreedModel.contains(query);
+    }).toList();
   }
 }

@@ -42,6 +42,9 @@ class _CatBreedPageState extends State<CatBreedPage> {
               onSubmitted: (value) {
                 catBeerdBloc.searchCatBreed(_searchTextController.text.trim());
               },
+              onChanged: (value) {
+                catBeerdBloc.searchCatBreed(_searchTextController.text.trim());
+              },
               textAlign: TextAlign.left,
               style: TextStyle(
                 fontSize: ScreenUtil().setSp(16),
@@ -50,7 +53,7 @@ class _CatBreedPageState extends State<CatBreedPage> {
               decoration: InputDecoration(
                 suffixIcon: IconButton(
                   onPressed: () {
-                    catBeerdBloc.searchCatBreed(_searchTextController.text.trim());
+                    //catBeerdBloc.searchCatBreed(_searchTextController.text.trim());
                   },
                   icon: const Icon(
                     Icons.search,
